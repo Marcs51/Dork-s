@@ -1,0 +1,142 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mines Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        .btn {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #444;
+        }
+        .btn-active {
+            background-color: #ff6600;
+        }
+        .input {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            border: none;
+            text-align: center;
+        }
+        .input:focus {
+            outline: none;
+            background-color: #444;
+        }
+        .grid-item {
+            background-color: #333;
+            border-radius: 0.25rem;
+            width: 3rem;
+            height: 3rem;
+        }
+        .grid-item:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center h-screen">
+    <div class="flex flex-col items-center space-y-4">
+        <div class="flex items-center space-x-2">
+            <button class="btn"><i class="fas fa-arrow-left"></i></button>
+            <h1 class="text-2xl font-bold">MINES</h1>
+        </div>
+        <div class="flex space-x-4">
+            <button class="btn btn-active">Manual</button>
+            <button class="btn">Auto</button>
+        </div>
+        <div class="flex flex-col items-center space-y-2">
+            <div class="flex items-center space-x-2">
+                <span>Bet Amount</span>
+                <input type="text" class="input" value="$1">
+            </div>
+            <div class="flex items-center space-x-2">
+                <button class="btn">min</button>
+                <button class="btn">-</button>
+                <button class="btn">+</button>
+                <button class="btn">max</button>
+            </div>
+            <div class="flex space-x-2">
+                <button class="btn">3</button>
+                <button class="btn">5</button>
+                <button class="btn btn-active">Mines: 3</button>
+                <button class="btn">10</button>
+                <button class="btn">20</button>
+            </div>
+            <button class="btn btn-active w-full">Start Game</button>
+        </div>
+        <div class="flex flex-col items-center space-y-2">
+            <div class="text-center">
+                <h2 class="text-lg font-bold">Game details</h2>
+                <div class="flex flex-col items-start space-y-1">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-gem"></i>
+                        <span>Gems left: 0</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-bomb"></i>
+                        <span>Mine risk: 0%</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-th"></i>
+                        <span>Opened tiles: 0/25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-5 gap-2">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+        <div class="flex space-x-2">
+            <button class="btn">x1.08</button>
+            <button class="btn">x1.23</button>
+            <button class="btn">x1.42</button>
+            <button class="btn">x1.66</button>
+            <button class="btn">x1.92</button>
+            <button class="btn">x2.25</button>
+            <button class="btn">x2.48</button>
+        </div>
+        <div class="flex items-center space-x-2">
+            <span>Balance: $100.00</span>
+            <button class="btn"><i class="fas fa-volume-up"></i></button>
+            <button class="btn"><i class="fas fa-cog"></i></button>
+        </div>
+    </div>
+</body>
+</html>
